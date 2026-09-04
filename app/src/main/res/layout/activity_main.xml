@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="45dp"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSerie"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linhaGuiaHorizontalPrimeira"
+        app:layout_constraintBottom_toTopOf="@+id/linhaGuiaHorizontalSegunda"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textViewMinhaLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minha Lista"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFilme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewFilme"
+        app:layout_constraintTop_toTopOf="@+id/textViewFilme" />
+
+    <TextView
+        android:id="@+id/textViewFilme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filmes"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewSerie"
+        app:layout_constraintEnd_toStartOf="@+id/textViewMinhaLista"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewSerie"
+        app:layout_constraintTop_toTopOf="@+id/textViewSerie" />
+
+    <TextView
+        android:id="@+id/textViewSerie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Série"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintEnd_toStartOf="@+id/textViewFilme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogo"
+        app:layout_constraintTop_toTopOf="@+id/imageViewLogo" />
+
+    <ImageView
+        android:id="@+id/imageLogoFilme"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/linhaGuiaHorizontalTerceira"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linhaGuiaHorizontalSegunda"
+        app:srcCompat="@drawable/logomovie" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalPrimeira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalSegunda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaHorizontalTerceira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/textViewInfantil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Infantil"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDragoes"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDragoes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaVerticalEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/textViewDragoes" />
+
+    <TextView
+        android:id="@+id/textViewDragoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dragões"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewImaginativo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewInfantil"
+        app:layout_constraintTop_toTopOf="@+id/linhaGuiaHorizontalTerceira" />
+
+    <TextView
+        android:id="@+id/textViewImaginativo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Imaginativo"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDragoes"
+        app:layout_constraintEnd_toEndOf="@id/linhaGuiaVerticalDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textViewDragoes"
+        app:layout_constraintTop_toTopOf="@+id/textViewDragoes" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaVerticalEsquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/linhaGuiaVerticalDireita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <Button
+        android:id="@+id/btnAssistir"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/ic_executar"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Assistir"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/btDetalhes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btMinhaLista"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <Button
+        android:id="@+id/btMinhaLista"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_adicionar"
+        android:padding="0dp"
+        android:text="MINHA LISTA"
+        android:textSize="9sp"
+        app:iconSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAssistir"
+        app:layout_constraintEnd_toStartOf="@+id/btnAssistir"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaVerticalEsquerda"
+        app:layout_constraintTop_toTopOf="@+id/btnAssistir"
+        tools:layout_editor_absoluteY="310dp" />
+
+    <Button
+        android:id="@+id/btDetalhes"
+        android:layout_width="80dp"
+        android:layout_height="65dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_informacao"
+        android:padding="0dp"
+        android:text="DETALHES"
+        android:textSize="9sp"
+        app:iconsize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAssistir"
+        app:layout_constraintEnd_toStartOf="@+id/linhaGuiaVerticalDireita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAssistir"
+        app:layout_constraintTop_toTopOf="@+id/btnAssistir"
+        tools:layout_editor_absoluteY="310dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

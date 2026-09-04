@@ -134,19 +134,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.07" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/linhaGuiaVerticalDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintGuide_percent="0.92" />
 
     <Button
         android:id="@+id/btnAssistir"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginTop="28dp"
         android:drawableLeft="@drawable/ic_executar"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
@@ -155,7 +156,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btDetalhes"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btMinhaLista"
-        tools:layout_editor_absoluteY="310dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDragoes" />
 
     <Button
         android:id="@+id/btMinhaLista"
@@ -190,6 +191,17 @@
         app:layout_constraintStart_toEndOf="@+id/btnAssistir"
         app:layout_constraintTop_toTopOf="@+id/btnAssistir"
         tools:layout_editor_absoluteY="310dp" />
+
+    <TextView
+        android:id="@+id/textViewLancamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Lançamento"
+        android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/linhaGuiaVerticalEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/btnAssistir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

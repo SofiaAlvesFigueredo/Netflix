@@ -9,7 +9,6 @@
     android:background="@color/fundo"
     tools:context=".MainActivity">
 
-    <!-- IMAGEM PRINCIPAL: COMO TREINAR O SEU DRAGÃO -->
     <ImageView
         android:id="@+id/imageCapa"
         android:layout_width="match_parent"
@@ -21,7 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/capa" />
 
-    <!-- LOGO NETFLIX -->
     <ImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="45dp"
@@ -34,12 +32,11 @@
         app:layout_constraintTop_toTopOf="@id/linhaGuiaHorizontalPrimeira"
         app:srcCompat="@drawable/logo" />
 
-    <!-- MENU: SÉRIE -->
     <TextView
         android:id="@+id/textViewSerie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Série"
+        android:text="@string/serie"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/imageViewLogo"
@@ -48,12 +45,11 @@
         app:layout_constraintStart_toEndOf="@id/imageViewLogo"
         app:layout_constraintTop_toTopOf="@id/imageViewLogo" />
 
-    <!-- MENU: FILMES -->
     <TextView
         android:id="@+id/textViewFilmes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Filmes"
+        android:text="@string/filmes"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/textViewSerie"
@@ -62,12 +58,11 @@
         app:layout_constraintStart_toEndOf="@id/textViewSerie"
         app:layout_constraintTop_toTopOf="@id/textViewSerie" />
 
-    <!-- MENU: MINHA LISTA -->
     <TextView
         android:id="@+id/textViewMinhaLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minha Lista"
+        android:text="@string/minha_lista"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/textViewFilmes"
@@ -76,7 +71,6 @@
         app:layout_constraintStart_toEndOf="@id/textViewFilmes"
         app:layout_constraintTop_toTopOf="@id/textViewFilmes" />
 
-    <!-- NOME DO FILME -->
     <ImageView
         android:id="@+id/imageViewNomeFilme"
         android:layout_width="203dp"
@@ -87,7 +81,6 @@
         app:layout_constraintTop_toBottomOf="@id/linhaGuiaHorizontalSegunda"
         app:srcCompat="@drawable/logomovie" />
 
-    <!-- LINHAS GUIA HORIZONTAIS -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/linhaGuiaHorizontalPrimeira"
         android:layout_width="wrap_content"
@@ -109,12 +102,11 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.30" />
 
-    <!-- CATEGORIA 1 -->
     <TextView
         android:id="@+id/textViewInfantil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Infantil"
+        android:text="@string/infantil"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/textViewDragoes"
@@ -123,12 +115,11 @@
         app:layout_constraintStart_toStartOf="@id/linhaGuiaVerticalEsquerda"
         app:layout_constraintTop_toTopOf="@id/textViewDragoes" />
 
-    <!-- CATEGORIA 2 -->
     <TextView
         android:id="@+id/textViewDragoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dragões"
+        android:text="@string/dragoes"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/textViewImaginativo"
@@ -136,12 +127,11 @@
         app:layout_constraintStart_toEndOf="@id/textViewInfantil"
         app:layout_constraintTop_toTopOf="@id/linhaGuiaHorizontalTerceira" />
 
-    <!-- CATEGORIA 3 -->
     <TextView
         android:id="@+id/textViewImaginativo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Imaginativo"
+        android:text="@string/imaginativo"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/textViewDragoes"
@@ -149,7 +139,6 @@
         app:layout_constraintStart_toEndOf="@id/textViewDragoes"
         app:layout_constraintTop_toTopOf="@id/textViewDragoes" />
 
-    <!-- LINHAS GUIA VERTICAIS -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/linhaGuiaVerticalEsquerda"
         android:layout_width="wrap_content"
@@ -164,21 +153,19 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.92" />
 
-    <!-- BOTÃO ASSISTIR -->
     <Button
         android:id="@+id/btnAssistir"
         android:layout_width="149dp"
         android:layout_height="41dp"
         android:layout_marginTop="28dp"
         android:drawableLeft="@drawable/ic_executar"
-        android:text="Assistir"
+        android:text="@string/assistir"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/btDetalhes"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/btMinhaLista"
         app:layout_constraintTop_toBottomOf="@id/textViewDragoes" />
 
-    <!-- BOTÃO MINHA LISTA -->
     <Button
         android:id="@+id/btMinhaLista"
         android:layout_width="80dp"
@@ -186,7 +173,7 @@
         android:backgroundTint="@android:color/transparent"
         android:drawableTop="@drawable/ic_adicionar"
         android:padding="0dp"
-        android:text="MINHA LISTA"
+        android:text="@string/minha_lista_botao"
         android:textSize="9sp"
         app:layout_constraintBottom_toBottomOf="@id/btnAssistir"
         app:layout_constraintEnd_toStartOf="@id/btnAssistir"
@@ -194,7 +181,6 @@
         app:layout_constraintStart_toStartOf="@id/linhaGuiaVerticalEsquerda"
         app:layout_constraintTop_toTopOf="@id/btnAssistir" />
 
-    <!-- BOTÃO DETALHES -->
     <Button
         android:id="@+id/btDetalhes"
         android:layout_width="80dp"
@@ -202,7 +188,7 @@
         android:backgroundTint="@android:color/transparent"
         android:drawableTop="@drawable/ic_informacao"
         android:padding="0dp"
-        android:text="DETALHES"
+        android:text="@string/detalhes"
         android:textSize="9sp"
         app:layout_constraintBottom_toBottomOf="@id/btnAssistir"
         app:layout_constraintEnd_toStartOf="@id/linhaGuiaVerticalDireita"
@@ -210,13 +196,12 @@
         app:layout_constraintStart_toEndOf="@id/btnAssistir"
         app:layout_constraintTop_toTopOf="@id/btnAssistir" />
 
-    <!-- LANÇAMENTOS -->
     <TextView
         android:id="@+id/textViewLancamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Lançamento"
+        android:text="@string/lancamento"
         android:textColor="@color/menu_navegacao"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/linhaGuiaVerticalEsquerda"
@@ -257,13 +242,12 @@
         app:layout_constraintTop_toTopOf="@id/imageViewFilme2"
         app:srcCompat="@drawable/f3" />
 
-    <!-- NOME DO ALUNO -->
     <TextView
         android:id="@+id/textViewNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
-        android:text="Sofia Alves Figueredo"
+        android:text="@string/nome_aluno"
         android:textColor="@color/menu_navegacao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/linhaGuiaVerticalEsquerda" />
